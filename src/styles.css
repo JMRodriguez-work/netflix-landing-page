@@ -1,0 +1,186 @@
+:root {
+  --primary-color: #e50914;
+  --red-box-color: #e50914;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/*Standar practice*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /*No puedo encontrar helvetica gratis*/
+  background-color: #000;
+  color: #999;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+/*MAIN HEADER*/
+.main-container-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 20px 28px 0;
+  z-index: 2;
+}
+
+.main-container-top img {
+  width: 130px;
+}
+
+.sign-in-box {
+  background-color: var(--red-box-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  opacity: 0.95;
+}
+
+.sign-in-box a {
+  font-size: 0.9rem;
+}
+
+.sign-in-box:hover {
+  opacity: 100;
+}
+
+/*MAIN CONTENT*/
+.main-container {
+  background-color: red;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center
+    center/cover;
+  border-bottom: 8px solid #222;
+}
+
+.main-container-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
+  z-index: 2;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 120px 100px 150px #000000, inset -120px -100px 250px #000000;
+}
+
+.main-container-title {
+  font-size: 3.7rem;
+  max-width: 700px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.3rem;
+}
+
+.main-container-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1.9rem;
+}
+
+.form-description {
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  font-weight: 400;
+}
+
+.email-form-box {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+}
+
+
+.email-minibox input {
+  width: 400px;
+  height: 100%;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: .5rem;
+}
+
+.label-email{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #8c8c8c;
+    transform: translateY(-50%);
+}
+
+.email-minibox input:focus {
+  outline: none;
+}
+
+input:focus + label {
+    transform: translate(-2%, -170%);
+    transition: .3s ease;
+    font-size: .7rem;
+}
+
+.labelFunction {
+    transform: translate(-10%, -90%);
+}
+
+.big-button {
+  background-color: var(--red-box-color);
+  padding: 6px 10px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  opacity: 0.95;
+  border: none;
+  color: #fff;
+  height: 100%;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.big-button:hover {
+  opacity: 100;
+}
